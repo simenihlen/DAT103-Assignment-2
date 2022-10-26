@@ -16,9 +16,9 @@ section .bss
 section .text
 global _start
 _start:
-    ; calling reversal function 
+   call reverseInputLines ; calling reversal function 
 
-    ; sys_exit system call
+   mov eax,1 ; sys_exit system call ????
 
 %include "readLine.asm"
 
