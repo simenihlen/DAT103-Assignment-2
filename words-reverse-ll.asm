@@ -19,7 +19,8 @@ _start:
    call reverseInputLines ; calling reversal function 
 
    mov eax,1 ; sys_exit system call ????
-
+   int 80h
+   
 %include "readLine.asm"
 
 %include "reverseInputLines.asm"
