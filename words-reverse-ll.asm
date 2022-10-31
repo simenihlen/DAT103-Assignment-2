@@ -16,10 +16,11 @@ section .bss
 section .text
 global _start
 _start:
-   call reverseInputLines ; calling reversal function 
+   call reverseInputLines  ; calling reversal function 
 
-   mov eax,1 ; sys_exit system call ????
-   int 80h
+   mov ebx, 0              ; exit code
+   mov eax, 0x01           ; syscall
+   int 0x80                ; interrupt
    
 %include "readLine.asm"
 
